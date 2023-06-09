@@ -1,32 +1,43 @@
 .container-floral-sides{
-    max-width: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: calc(var(--viewport-height) - 100px);
-  }
-  
-  .container-floral-sides img{
-    overflow: hidden;
-  }
-  
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: calc(var(--viewport-height) - 100px);
+}
+
+.container-floral-sides .floral-sides-left, .floral-sides-right{
+  overflow: hidden;
+}
+
+.floral-sides-left{
+  transform: scaleX(-1);
+  background-image: url(../img/floral-sides.svg);
+  height: auto;
+  width: 200px;
+  overflow: hidden;
+}
+
+.floral-sides-right{
+  transform: scaleX(1);
+  float: right;
+  background-image: url(../img/floral-sides.svg);
+  height: auto;
+  width: 200px;
+  overflow: hidden;
+}
+
+@media(max-width:750px){
   .floral-sides-left{
-    transform: scaleX(-1);
+    margin-left: -40px;
   }
   
   .floral-sides-right{
-    transform: scaleX(1);
-    float: right;
-  }
-  
-  @media(max-width:750px){
-    .floral-sides-left{
-      margin-left: -80px;
-    }
-    
-    .floral-sides-right{
-      margin-right: -80px
-    }
+    margin-right: -40px;
   
   }
+
+}
