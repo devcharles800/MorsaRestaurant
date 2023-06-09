@@ -1,0 +1,86 @@
+.hero-section{
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  /* The hero image */
+  .hero-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: brightness(20%);
+}
+    
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-text h1{
+    font-size: 4rem;
+    font-family: 'Satisfy', cursive;
+    color: var(--orange); /*#FFA836*/
+}
+
+.hero-text p{
+    text-transform: uppercase;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: none;
+    color: var(--orange);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: 1px solid var(--orange);
+    margin: 0 auto;
+    margin-top: 3rem;
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-btn:hover {
+  background-color: var(--orange); 
+  color: var(--grey);
+  font-weight: bold;
+}
+
+.hero-btn:focus{
+    background-color: var(--orange); 
+    color: var(--grey);
+    font-weight: bold;
+}
+
+@media(max-width:600px){
+
+    .hero-text h1{
+        font-size: 2rem;
+        
+    }
+
+    .hero-text p{
+        font-size: 0.6rem;
+        line-height: 1.7;
+    }
+
+    .hero-btn{
+        font-size: 0.6rem;
+    }
+}
