@@ -1,0 +1,32 @@
+.container-floral-sides{
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: calc(var(--viewport-height) - 100px);
+  }
+  
+  .container-floral-sides img{
+    overflow: hidden;
+  }
+  
+  .floral-sides-left{
+    transform: scaleX(-1);
+  }
+  
+  .floral-sides-right{
+    transform: scaleX(1);
+    float: right;
+  }
+  
+  @media(max-width:750px){
+    .floral-sides-left{
+      margin-left: -80px;
+    }
+    
+    .floral-sides-right{
+      margin-right: -80px
+    }
+  
+  }
