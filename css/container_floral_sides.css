@@ -7,37 +7,37 @@
   flex-direction: row;
   justify-content: space-between;
   margin-top: calc(var(--viewport-height) - 100px);
+  position: relative;
 }
 
-.container-floral-sides .floral-sides-left, .floral-sides-right{
+.floral-sides-left, .floral-sides-right{
+  background-image: url(../img/floral-sides.svg);
+  background-repeat: no-repeat;
+  position: absolute;
   overflow: hidden;
+  height: 100%;
+  width: 195px;
+  z-index: -1;
+  top: 0;
 }
 
 .floral-sides-left{
+  left: 0;
   transform: scaleX(-1);
-  background-image: url(../img/floral-sides.svg);
-  height: auto;
-  width: 200px;
-  overflow: hidden;
 }
 
 .floral-sides-right{
-  transform: scaleX(1);
-  float: right;
-  background-image: url(../img/floral-sides.svg);
-  height: auto;
-  width: 200px;
-  overflow: hidden;
-}
+  right: 0;
+  
 
+}
 @media(max-width:750px){
   .floral-sides-left{
-    margin-left: -40px;
+    margin-left: -80px;
   }
   
   .floral-sides-right{
-    margin-right: -40px;
-  
+    margin-right: -80px
   }
 
 }

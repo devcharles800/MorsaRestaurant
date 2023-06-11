@@ -1,5 +1,7 @@
 main{
-    width: 80%;
+    width: 90%;
+    z-index: 99;
+    margin: 0 auto;
 }
 
 .sub-section{
@@ -51,9 +53,14 @@ main{
     margin: auto 0;
 }
 
+#menu-img{
+    transition: all 1s ease;
+}
+
 .menu-nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
 }
 
 .menu-btn{
@@ -125,9 +132,8 @@ main{
 
     .menu-btn{
         font-size: 7px;
-        width: 65px;
+        width: 75px;
         margin: 5px 5px;
-        padding: 1px 1px;
     }
 
 
@@ -146,7 +152,7 @@ main{
     }
 
     .menu-nav{
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     .a-little-extra{
@@ -282,10 +288,6 @@ main{
     margin-top: 50px;
     
   }
-
-.customer-reviews p{
-    text-align: center;
-}
   
   .customer-reviews .section-description{
     text-align: center;
@@ -345,4 +347,85 @@ main{
     }
   }
   
+  .location{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .location .section-heading{
+    margin-bottom: 20px;
+  }
+
+  .location iframe{
+    margin: 0 auto;
+    width: 100%;
+    filter: invert(100%);
+  }
+
+
+  .gallery{
+    text-align: center;
+  }
+
+  .gallery .section-heading{
+    margin-top: 100px;
+    margin-bottom: 30px;
+  }
+
+  .gallery img{
+    width: 100px;
+    transition: 1s ease;
+  }
+
+  .gallery img:hover{
+    transform: scale(2);
+  }
+
+  .gallery a{
+    color: #eb8a0c;
+    text-decoration: none;
+    transition: transform 1s ease-out;
   
+  }
+  
+  .gallery a:hover{
+    font-weight: 800;
+  }
+  
+  
+  footer{
+    background-color: #181717;
+    margin-top: 50px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-links{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 15px;
+  }
+
+  footer p{
+    margin-top: 10px;
+    padding: 15px;
+  }
+
+  footer a{
+    text-decoration: none;
+    color: white;
+  }
+
+  footer i{
+    color: #eb8a0c;
+  }
+
+.copyright-msg{
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 50px;
+}
