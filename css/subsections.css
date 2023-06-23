@@ -61,6 +61,7 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
+    padding: 0 20px;
 }
 
 .menu-btn{
@@ -87,6 +88,12 @@ main{
     font-weight: bold;
 }
 
+.menu-btn:focus {
+    background-position: left;
+    color: var(--grey);
+    font-weight: bold;
+}
+
 .cta-button{
     text-decoration: none;
     color: var(--orange);
@@ -96,6 +103,12 @@ main{
 }
 
 .cta-button:hover{
+    background-color: var(--orange); 
+    color: var(--grey);
+    font-weight: bold;
+}
+
+.cta-button:focus{
     background-color: var(--orange); 
     color: var(--grey);
     font-weight: bold;
@@ -159,10 +172,26 @@ main{
         display: block;
     }
 
+
+}
+
+@media(max-width: 300px){
+    .menu-nav{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media(min-width: 500px) and (max-width: 540px){
+    
+
     .menu-btn{
         width: 100px;
     }
 
+    .menu-nav{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
 }
 
@@ -286,7 +315,12 @@ main{
     width:95%;
     margin: 0 auto;
     margin-top: 50px;
+    margin-bottom: 50px;
     
+  }
+
+  .customer-reviews .section-description p{
+    text-align: center;
   }
   
   .customer-reviews .section-description{
@@ -397,10 +431,23 @@ main{
   
   footer{
     background-color: #181717;
-    margin-top: 50px; 
+    max-width: 100%;
+  }
+
+  footer .container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+
+  }
+
+  .contact{
     display: flex;
     flex-direction: column;
-    align-items: center;
+  }
+
+  .contact .nav-branding{
+    margin: -100px 0;
   }
 
   .logo-links{
@@ -415,17 +462,51 @@ main{
     padding: 15px;
   }
 
-  footer a{
+  footer p a{
     text-decoration: none;
     color: white;
+    transition: .5s ease;
   }
 
   footer i{
     color: #eb8a0c;
   }
 
+  footer p a:hover{
+    color: var(--orange);
+  }
+
+
+
 .copyright-msg{
   text-align: center;
   font-size: 10px;
-  margin-bottom: 50px;
+  display: block;
+}
+
+
+.restaurant-working-hours, .bar-working-hours{
+    margin: auto 0;
+}
+
+.restaurant-working-hours p, .bar-working-hours p{
+    text-transform: uppercase;
+    padding-left: 0;
+    margin: 0 0;
+}
+
+
+@media(max-width: 700px){
+    footer .container{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    footer .container .restaurant-working-hours, .bar-working-hours{
+        display: none;
+    }
+
+    .contact{
+        align-items: center;
+    }
 }
